@@ -39,6 +39,6 @@ The model predicts an integer label image. The numeric IDs in the output are map
 | 32 | `46` | Tooth 46 (FDI notation) |
 | 33 | `47` | Tooth 47 (FDI notation) |
 | 34 | `48` | Tooth 48 (FDI notation) |
-| 35 | `seg5` | Additional segmentation label (`seg5`) |
+| 35 | `seg5` | Mandibular canal |
 
-`seg5` is listed as an auxiliary class in the original model configuration; its anatomical definition is not included in the supplied metadata.
+`seg5` is the original label name used during model training. **Label 35 represents the mandibular canal**; the original key is preserved to keep the published label mapping consistent with the trained checkpoint.

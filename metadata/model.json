@@ -27,7 +27,8 @@
   "additional_label": {
     "id": 35,
     "name": "seg5",
-    "meaning": "Not specified in the supplied dataset metadata"
+    "meaning": "Mandibular canal",
+    "original_training_label": "seg5"
   },
   "model_access": "Available upon reasonable request for academic and research purposes",
   "model_contact_email": "simaichen413@gmail.com",

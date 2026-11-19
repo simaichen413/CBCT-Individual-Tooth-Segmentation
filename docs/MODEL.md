@@ -33,7 +33,7 @@ nnUNetv2_install_pretrained_model_from_zip /path/to/nnUNet_413.zip
 
 ## Labels and evaluation
 
-The label mapping includes background, maxilla, mandible, 32 FDI tooth classes, and an auxiliary label named `seg5`. Its anatomical meaning is not specified in the exported dataset metadata. See [label definitions](LABELS.md) and [internal validation metrics](VALIDATION.md).
+The label mapping includes background, maxilla, mandible, 32 FDI tooth classes, and the mandibular canal (label 35, recorded under the original configuration key `seg5`). This key is retained for compatibility with the trained model. See [label definitions](LABELS.md) and [internal validation metrics](VALIDATION.md).
 
 ## Reference
 
