@@ -6,7 +6,7 @@ This repository documents a **3D nnU-Net v2 model** for multiclass segmentation 
 
 The images below illustrate the predicted segmentation overlaid on CBCT slices and reconstructed as three-dimensional tooth and jawbone surfaces.
 
-| CBCT segmentation: axial, coronal, sagittal, and 3D views | CBCT segmentation: additional multiplanar and oblique 3D views |
+| CBCT segmentation: axial, coronal, sagittal, and 3D views | CBCT segmentation: axial, coronal, sagittal, and 3D views |
 |:---:|:---:|
 | ![Multiplanar CBCT segmentation with a frontal 3D rendering](assets/segmentation/cbct_segmentation_views.png) | ![Multiplanar CBCT segmentation with an oblique 3D rendering](assets/segmentation/cbct_multiplanar_oblique.png) |
 
