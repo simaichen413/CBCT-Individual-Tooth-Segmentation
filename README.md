@@ -6,27 +6,27 @@ This repository documents a **3D nnU-Net v2 model** for multiclass segmentation 
 
 The images below illustrate the predicted segmentation overlaid on CBCT slices and reconstructed as three-dimensional tooth and jawbone surfaces.
 
-| CBCT segmentation: axial, coronal, sagittal, and 3D views |  CBCT segmentation: axial, coronal, sagittal, and 3D views |
-| :-------------------------------------------------------: | :--------------------------------------------------------: |
-| Multiplanar CBCT segmentation with a frontal 3D rendering | Multiplanar CBCT segmentation with an oblique 3D rendering |
+| CBCT segmentation: axial, coronal, sagittal, and 3D views | CBCT segmentation: additional multiplanar and oblique 3D views |
+|:---:|:---:|
+| ![Multiplanar CBCT segmentation with a frontal 3D rendering](assets/segmentation/cbct_segmentation_views.png) | ![Multiplanar CBCT segmentation with an oblique 3D rendering](assets/segmentation/cbct_multiplanar_oblique.png) |
 
-|            Tooth and jawbone reconstruction           |                 Individual teeth: frontal view                |
-| :---------------------------------------------------: | :-----------------------------------------------------------: |
-| Three-dimensional CBCT tooth and jawbone segmentation | Color-coded individually segmented teeth shown from the front |
+| Tooth and jawbone reconstruction | Individual teeth: frontal view |
+|:---:|:---:|
+| ![Three-dimensional CBCT tooth and jawbone segmentation](assets/segmentation/craniofacial_reconstruction.png) | ![Color-coded individually segmented teeth shown from the front](assets/segmentation/individual_teeth_frontal.png) |
 
 ## Model overview
 
-| Property                     | Value                                                                                                                    |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| Framework                    | nnU-Net v2                                                                                                               |
-| Dataset                      | `Dataset413_byscm` (ID `413`)                                                                                            |
-| Configuration                | `3d_fullres`                                                                                                             |
-| Trainer                      | `nnUNetTrainerNoMirroring`                                                                                               |
-| Available fold               | `0` (`checkpoint_final.pth`)                                                                                             |
-| Input                        | Single-channel CBCT, NIfTI `.nii.gz`                                                                                     |
-| Preprocessing target spacing | 0.25 × 0.25 × 0.25 mm                                                                                                    |
-| Segmentation labels          | Maxilla, mandible, 32 FDI tooth classes, and mandibular canal (label 35, stored as `seg5` in the training configuration) |
-| Development dataset          | 55 annotated CBCT scans (44 training / 11 internal validation)                                                           |
+| Property | Value |
+|---|---|
+| Framework | nnU-Net v2 |
+| Dataset | `Dataset413_byscm` (ID `413`) |
+| Configuration | `3d_fullres` |
+| Trainer | `nnUNetTrainerNoMirroring` |
+| Available fold | `0` (`checkpoint_final.pth`) |
+| Input | Single-channel CBCT, NIfTI `.nii.gz` |
+| Preprocessing target spacing | 0.25 × 0.25 × 0.25 mm |
+| Segmentation labels | Maxilla, mandible, 32 FDI tooth classes, and mandibular canal (label 35, stored as `seg5` in the training configuration) |
+| Development dataset | 55 annotated CBCT scans (44 training / 11 internal validation) |
 
 The exact integer-to-FDI mapping is provided in [Label definitions](docs/LABELS.md). Label 35 corresponds to the **mandibular canal**. Its original configuration key, `seg5`, is retained for compatibility with the trained model.
 
@@ -34,7 +34,7 @@ The exact integer-to-FDI mapping is provided in [Label definitions](docs/LABELS.
 
 **The trained model weights are available upon reasonable request for academic and research purposes.**
 
-To request the pretrained nnU-Net model, please email **<simaichen413@gmail.com>** with a brief description of your research purpose.
+To request the pretrained nnU-Net model, please email **[simaichen413@gmail.com](mailto:simaichen413@gmail.com)** with a brief description of your research purpose.
 
 The model is provided as an nnU-Net v2-compatible ZIP archive (`nnUNet_413.zip`). Once received, install the ZIP directly using:
 
@@ -83,12 +83,12 @@ For additional instructions on macOS, Linux, and Windows, see [Installation](doc
 
 Internal validation was performed on 11 CBCT scans. Metrics below are calculated against reference segmentation labels.
 
-| Target                                              |  Mean Dice |   Mean IoU |
-| --------------------------------------------------- | ---------: | ---------: |
+| Target | Mean Dice | Mean IoU |
+|---|---:|---:|
 | 32 individual tooth classes (unweighted class mean) | **0.9670** | **0.9494** |
-| Maxilla                                             |     0.9696 |     0.9410 |
-| Mandible                                            |     0.9852 |     0.9709 |
-| All 35 foreground classes (unweighted class mean)   |     0.9667 |     0.9478 |
+| Maxilla | 0.9696 | 0.9410 |
+| Mandible | 0.9852 | 0.9709 |
+| All 35 foreground classes (unweighted class mean) | 0.9667 | 0.9478 |
 
 These values are from internal Fold 0 validation. See [Validation](docs/VALIDATION.md) and [per-class metrics](metadata/validation_by_label.csv) for the full results.
 
@@ -120,4 +120,4 @@ CBCT-Individual-Tooth-Segmentation/
 
 ## Reference
 
-Isensee F, Jaeger PF, Kohl SAA, Petersen J, Maier-Hein KH. nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. *Nature Methods*. 2021;18:203–211. <https://doi.org/10.1038/s41592-020-01008-z>
+Isensee F, Jaeger PF, Kohl SAA, Petersen J, Maier-Hein KH. nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. *Nature Methods*. 2021;18:203–211. https://doi.org/10.1038/s41592-020-01008-z
