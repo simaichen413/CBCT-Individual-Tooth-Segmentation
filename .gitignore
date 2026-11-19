@@ -1,0 +1,34 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Local study data, scans, and inference results
+*.dcm
+*.nii
+*.nii.gz
+*.nrrd
+*.mha
+*.mhd
+imagesTs/
+labelsTs/
+predictions/
+outputs/
+output/
+
+# Environment credentials
+.env
+.env.*
+
+# Model archives and checkpoints
+model/*.zip
+*.pth
+*.pt

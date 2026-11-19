@@ -1,0 +1,35 @@
+{
+  "model_name": "CBCT Tooth and Jawbone Segmentation",
+  "dataset_id": 413,
+  "dataset_name": "Dataset413_byscm",
+  "nnunet_configuration": "3d_fullres",
+  "trainer": "nnUNetTrainerNoMirroring",
+  "folds": [
+    0
+  ],
+  "training_annotations_reported": 55,
+  "training_cases": 44,
+  "internal_validation_cases": 11,
+  "input_channels": {
+    "0": "CT"
+  },
+  "input_extension": ".nii.gz",
+  "voxel_spacing_mm": [
+    0.25,
+    0.25,
+    0.25
+  ],
+  "label_count_including_background": 36,
+  "summary_foreground_mean_dice": 0.9666730986567212,
+  "summary_foreground_mean_iou": 0.9477555210723135,
+  "mean_32_tooth_dice": 0.9670069697188385,
+  "mean_32_tooth_iou": 0.9494145777709272,
+  "additional_label": {
+    "id": 35,
+    "name": "seg5",
+    "meaning": "Not specified in the supplied dataset metadata"
+  },
+  "model_access": "Available upon reasonable request for academic and research purposes",
+  "model_contact_email": "simaichen413@gmail.com",
+  "archive_filename": "nnUNet_413.zip"
+}
