@@ -1,4 +1,4 @@
-# CBCT Tooth and Jawbone Segmentation
+# CBCT Individual Tooth Segmentation
 
 This repository documents a **3D nnU-Net v2 model** for multiclass segmentation of teeth, maxilla, and mandible in cone-beam computed tomography (CBCT). The model generates individual tooth labels following the FDI numbering system and provides three-dimensional segmentation masks for visualization and quantitative image analysis.
 
@@ -6,13 +6,13 @@ This repository documents a **3D nnU-Net v2 model** for multiclass segmentation 
 
 The images below illustrate the predicted segmentation overlaid on CBCT slices and reconstructed as three-dimensional tooth and jawbone surfaces.
 
-| CBCT segmentation: axial, coronal, sagittal, and 3D views | Tooth and jawbone reconstruction |
+| CBCT segmentation: axial, coronal, sagittal, and 3D views | CBCT segmentation: additional multiplanar and oblique 3D views |
 |:---:|:---:|
-| ![CBCT multiplanar segmentation overlays](assets/segmentation/cbct_segmentation_views.png) | ![Three-dimensional CBCT tooth and jawbone segmentation](assets/segmentation/craniofacial_reconstruction.png) |
+| ![Multiplanar CBCT segmentation with a frontal 3D rendering](assets/segmentation/cbct_segmentation_views.png) | ![Multiplanar CBCT segmentation with an oblique 3D rendering](assets/segmentation/cbct_multiplanar_oblique.png) |
 
-| Individual teeth: frontal view | Individual teeth: oblique view |
+| Tooth and jawbone reconstruction | Individual teeth: frontal view |
 |:---:|:---:|
-| ![Color-coded teeth shown from the front](assets/segmentation/individual_teeth_frontal.png) | ![Color-coded teeth shown from an oblique angle](assets/segmentation/individual_teeth_oblique.png) |
+| ![Three-dimensional CBCT tooth and jawbone segmentation](assets/segmentation/craniofacial_reconstruction.png) | ![Color-coded individually segmented teeth shown from the front](assets/segmentation/individual_teeth_frontal.png) |
 
 ## Model overview
 
@@ -95,7 +95,7 @@ These values are from internal Fold 0 validation. See [Validation](docs/VALIDATI
 ## Repository structure
 
 ```text
-CBCT-Tooth-Jaw-Segmentation/
+CBCT-Individual-Tooth-Segmentation/
 ├── README.md
 ├── .gitignore
 ├── assets/
