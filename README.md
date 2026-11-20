@@ -25,10 +25,10 @@ The images below illustrate the predicted segmentation overlaid on CBCT slices a
 | Available fold | `0` (`checkpoint_final.pth`) |
 | Input | Single-channel CBCT, NIfTI `.nii.gz` |
 | Preprocessing target spacing | 0.25 × 0.25 × 0.25 mm |
-| Segmentation labels | Maxilla, mandible, 32 FDI tooth classes, and mandibular canal (label 35, stored as `seg5` in the training configuration) |
+| Segmentation labels | Maxilla, mandible, 32 FDI tooth classes, and mandibular canal|
 | Development dataset | 55 annotated CBCT scans (44 training / 11 internal validation) |
 
-The exact integer-to-FDI mapping is provided in [Label definitions](docs/LABELS.md). Label 35 corresponds to the **mandibular canal**. Its original configuration key, `seg5`, is retained for compatibility with the trained model.
+The exact integer-to-FDI mapping is provided in [Label definitions](docs/LABELS.md). 
 
 ## Model availability
 
