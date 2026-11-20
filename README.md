@@ -32,6 +32,8 @@ The exact integer-to-FDI mapping is provided in [Label definitions](docs/LABELS.
 
 ## Model availability
 
+**As this model was developed using clinical CBCT images, the pretrained weights are not publicly distributed to support patient privacy protection and responsible research data sharing.**
+
 **The trained model weights are available upon reasonable request for academic and research purposes.**
 
 To request the pretrained nnU-Net model, please email **[simaichen413@gmail.com](mailto:simaichen413@gmail.com)** with a brief description of your research purpose.
